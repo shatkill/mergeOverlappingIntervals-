@@ -6,9 +6,13 @@ Idea:
     Sort intervals by begin value => potentially overlapping intervals are adjacent to each other
 
     Put first interval on stack, loop through remaining intervals in ascending order
+    
         check if end of stack top interval overlaps start of loop interval
+        
             if yes check if loop interval has greater end value than stack top interval
+            
                 if yes set stack top end value to loop interval end value = merge
+                
             if no overlap loop interval can be added to stack
            
         
@@ -40,5 +44,4 @@ Example:
     
             => last interval				=> d is fixed part of solution
 
-                                => [2, 23], [25, 30] is returned
-
+    Output: [2, 23], [25, 30]
