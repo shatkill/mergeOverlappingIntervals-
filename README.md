@@ -1,5 +1,13 @@
 # Java Implementation of Merge Overlapping Intervals Method
 
+- built with Maven
+- dependencies: Testing Framework JUnit in version 4.13.2
+- tested in Java 15
+- time complexity O(n*log(n)) with n = amount of intervals
+- Limitations: 
+    - assumes that values are in the range of java long values
+    - assumes that intervals are arranged with lower limit first and upper second
+
 
 Idea:   
 
