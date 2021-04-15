@@ -22,8 +22,8 @@
 - determine if last output interval is overlapping the loop interval by comparing output intervals end to loop intervals begin
   - if true => check if they fully overlap by comparing both end values
 
-    - if not fully overlap, "merge" intervals by updating outputs end to loop intervals end and compare to next loop interval
-    - 
+    - if not fully overlap, "merge" intervals by updating outputs end value to loop intervals end and compare to next loop interval
+    
   - if false => intervals don't overlap and loop interval don't has to be merged and can directly be added to the output
   - 
     - go to next loop interval and compare to newly added output interval
@@ -35,28 +35,28 @@
 
  - Step 1: Sorting	
   
-    [25,30] [2,19] [14, 23] [4,8] => [2, 19] [4, 8] [14, 23] [25, 30]        
-    
-   (in the following a = [2,19] , b = [4,8], c = [14, 23], d = [25, 30])
+        [25,30] [2,19] [14, 23] [4,8] => [2, 19] [4, 8] [14, 23] [25, 30]        
+
+        (in the following a = [2,19] , b = [4,8], c = [14, 23], d = [25, 30])
    
   - Step 2: Merging
     
     Iteration 1:    [2, 19] – [4,8]    
     
-            => 19 > 4		=> a overlaps b
-            => 19 > 8 		=> a includes b		    => push a to solution, compare to c
+        => 19 > 4		=> a overlaps b
+        => 19 > 8		=> a includes b         => push a to solution, compare to c
 
     Iteration 2:	[2,19] – [14, 23] 
     
-            => 19 > 14	    => a overlaps c                           
-            => 19 < 23	    => merge a and c        => update a to a' = [2, 23]
+        => 19 > 14      => a overlaps c                           
+        => 19 < 23      => merge a and c        => update a to a' = [2, 23]
 
     Iteration 3:	[2, 23] – [25, 30]
     
-            => 23 < 25	    => a don‘t overlap d 	=> a‘ is fixed part of solution
+        => 23 < 25      => a don‘t overlap d    => a‘ is fixed part of solution
 
     Iteration 4:	[25, 30]         
     
-            => last interval				        => d is fixed part of solution
+        => last interval                        => d is fixed part of solution
 
  - Output: [2, 23], [25, 30]
