@@ -15,6 +15,16 @@
     - has been tested upto 10 million overlapping inputs, which runs just fine
       - higher inputs could be solved via divide and conquer approach
 
+## Code Structure
+ - MainDriver
+   - merge method which takes a list of interval objects as input and merges the overlapping intervals
+   - main method which calculates the readme example
+
+ - Interval
+   - POJO(Plain-Old-Java-Object) with long fields 'begin' and 'end', which provide the structure for the interval values
+
+ - MainDriverTest
+   - holds JUnit test cases
 
 ## Idea:   
 
