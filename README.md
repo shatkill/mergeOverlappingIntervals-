@@ -1,16 +1,19 @@
 # Java Implementation of Merge Overlapping Intervals Method
 
 ## Description:
-
-- built with Maven
+ 
 - took about 3h to write algorithm and tests
-- dependencies: Testing Framework JUnit in version 4.13.2
+- built with Maven
+  - dependencies: Testing Framework JUnit in version 4.13.2
 - tested in Java 15
+- easiest build via Eclipse IDE Git Smart Import
 - time complexity   O(n*log(n))
 - space complexity  O(n)             with n = amount of intervals
 - Limitations: 
     - assumes that values are in the range of java long values
     - assumes that intervals are arranged with lower limit first and upper second
+    - has been tested upto 10 million overlapping inputs, which runs just fine
+      - higher inputs could be solved via divide and conquer approach
 
 
 ## Idea:   
