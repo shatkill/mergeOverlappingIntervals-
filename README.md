@@ -43,8 +43,8 @@
     
     Iteration 1:    [2, 19] – [4,8]    
     
-        => 19 > 4		=> a overlaps b
-        => 19 > 8		=> a includes b         => push a to solution, compare to c
+        => 19 > 4       => a overlaps b
+        => 19 > 8       => a includes b         => push a to solution, compare to c
 
     Iteration 2:	[2,19] – [14, 23] 
     
